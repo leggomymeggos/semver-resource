@@ -107,4 +107,10 @@ func FromSource(source models.Source) (Driver, error) {
 	default:
 		return nil, fmt.Errorf("unknown driver: %s", source.Driver)
 	}
+
+	/*
+	todo
+	   look for "auto-parse": true, if true save the git credentials somewhere
+	   (potentially with validation; the git resource/driver might help this)
+	*/
 }

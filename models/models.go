@@ -71,6 +71,10 @@ type Source struct {
 	OpenStack OpenStackOptions `json:"openstack"`
 
 	JSONKey string `json:"json_key"`
+
+	/* todo
+	add your fields here
+	*/
 }
 
 // OpenStackOptions contains properties for authenticating and accessing

@@ -36,6 +36,16 @@ func main() {
 		fatal("parsing semantic version", err)
 	}
 
+	/*
+	todo
+		here is where 'auto' would need to be applied - parsing commits, etc
+		could also have a param in the source - ie "auto-parse": "true", then in params:
+				git-uri
+				branch
+		still need "bump": "auto" for that to matter
+		and can't use "bump": "auto" if "auto-parse" is not "true"
+	*/
+
 	bumped := version.BumpFromParams(request.Params.Bump, request.Params.Pre).Apply(inputVersion)
 
 	if !bumped.Equals(inputVersion) {
